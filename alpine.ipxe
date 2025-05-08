@@ -1,0 +1,5 @@
+#!ipxe
+set base-url https://dl-cdn.alpinelinux.org/alpine/v3.21/releases/x86_64
+kernel ${base-url}/boot/vmlinuz-virt initrd=initramfs-virt modules=loop,squashfs,sd-mod,usb-storage quiet
+initrd ${base-url}/boot/initramfs-virt
+boot
